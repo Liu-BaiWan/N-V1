@@ -1,0 +1,313 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#05070f;font-family:"Noto Sans CJK SC","Noto Sans SC","Noto Sans CJK",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+
+.slide{
+  width:1080px;height:1920px;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  color:#EEF1F7;padding:88px 80px 176px;
+  background:
+    radial-gradient(1200px 720px at 88% -8%, rgba(245,196,81,.16), transparent 62%),
+    radial-gradient(900px 620px at -12% 110%, rgba(53,208,165,.13), transparent 60%),
+    linear-gradient(160deg,#0c1224 0%,#090d19 52%,#06080f 100%);
+}
+.slide::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:120px 120px;
+  mask-image:radial-gradient(1200px 1400px at 50% 30%,#000 25%,transparent 78%);
+  -webkit-mask-image:radial-gradient(1200px 1400px at 50% 30%,#000 25%,transparent 78%);
+}
+.slide>*{position:relative;z-index:2}
+
+.ghost{position:absolute;right:-24px;top:96px;font-size:620px;line-height:1;font-weight:900;letter-spacing:-34px;opacity:.055;z-index:1;pointer-events:none}
+.ghost.left{right:auto;left:-36px}
+
+/* ---------- header ---------- */
+.hd{display:flex;align-items:center;gap:16px;margin-bottom:44px;flex-wrap:wrap;flex:0 0 auto}
+.chip{font-size:28px;font-weight:800;letter-spacing:1px;padding:11px 24px;border-radius:999px;background:rgba(245,196,81,.13);color:#F5C451;border:1px solid rgba(245,196,81,.34)}
+.chip.ghosty{background:rgba(255,255,255,.06);color:#AEB8CC;border-color:rgba(255,255,255,.13)}
+.chip.green{background:rgba(53,208,165,.13);color:#35D0A5;border-color:rgba(53,208,165,.32)}
+
+h1{font-size:106px;line-height:1.14;font-weight:900;letter-spacing:-2px;flex:0 0 auto}
+h1 .hl{color:#F5C451}
+h1 .em{color:#35D0A5}
+.lead{font-size:42px;line-height:1.52;color:#B7C0D4;margin-top:26px;font-weight:500;flex:0 0 auto}
+.lead b{color:#EEF1F7;font-weight:800}
+
+/* ---------- list items ---------- */
+.items{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:22px;margin-top:36px}
+.item{display:flex;gap:26px;align-items:flex-start;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.022));border:1px solid rgba(255,255,255,.09);border-radius:28px;padding:32px 36px}
+.item .num{flex:0 0 78px;height:78px;border-radius:24px;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:900;background:rgba(245,196,81,.16);color:#F5C451;border:1px solid rgba(245,196,81,.3)}
+.item .num.g{background:rgba(53,208,165,.15);color:#35D0A5;border-color:rgba(53,208,165,.3)}
+.item .tt{font-size:42px;font-weight:800;line-height:1.3;margin-bottom:12px}
+.item .tt small{display:block;font-size:31px;font-weight:600;color:#93A0B8;margin-top:8px;letter-spacing:.5px}
+.item .tx{font-size:35px;line-height:1.5;color:#C6CEDE}
+.item .tx em{font-style:normal;color:#F5C451;font-weight:700}
+
+/* ---------- fact rows ---------- */
+.facts{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;gap:34px;margin-top:44px}
+.fact{display:flex;gap:24px;align-items:flex-start}
+.fk{flex:0 0 100px;font-size:30px;font-weight:900;color:#F5C451;letter-spacing:1px;padding-top:12px}
+.fk.g{color:#35D0A5}
+.fv{flex:1;font-size:39px;line-height:1.48;color:#D7DEEC;font-weight:500}
+.fv b{color:#fff;font-weight:800}
+.fv .tag{display:inline-block;padding:3px 14px;border-radius:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#DDE4F0;font-size:33px;font-weight:700;margin:4px 6px 4px 0}
+
+/* ---------- callout ---------- */
+.callout{flex:0 0 auto;background:linear-gradient(135deg,rgba(53,208,165,.17),rgba(53,208,165,.05));border:1px solid rgba(53,208,165,.36);border-radius:30px;padding:36px 40px}
+.callout.gold{background:linear-gradient(135deg,rgba(245,196,81,.17),rgba(245,196,81,.045));border-color:rgba(245,196,81,.36)}
+.callout .lb{font-size:28px;font-weight:900;color:#35D0A5;letter-spacing:3px;margin-bottom:12px}
+.callout.gold .lb{color:#F5C451}
+.callout .tx{font-size:44px;line-height:1.42;font-weight:800;color:#F2F6FF}
+
+/* ---------- cover ---------- */
+.cover{padding-top:150px}
+.cover h1{font-size:138px;line-height:1.1;letter-spacing:-4px}
+.cover .lead{font-size:48px;margin-top:32px;color:#C3CBDB}
+.cover .rule{width:160px;height:9px;border-radius:6px;background:linear-gradient(90deg,#F5C451,#35D0A5);margin:48px 0}
+.tags{display:flex;flex-wrap:wrap;gap:18px}
+.tagb{padding:18px 32px;border-radius:20px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);font-size:36px;font-weight:800;color:#E4EAF6}
+.tagb.hot{background:rgba(245,196,81,.15);border-color:rgba(245,196,81,.38);color:#F5C451}
+.swipe{margin-top:76px;display:flex;align-items:center;gap:18px;font-size:36px;font-weight:800;color:#8E9AB2}
+.swipe .arrow{width:60px;height:60px;border-radius:50%;border:2px solid rgba(245,196,81,.5);display:flex;align-items:center;justify-content:center;color:#F5C451;font-size:32px}
+.chart{position:absolute;right:0;bottom:230px;width:1080px;opacity:.32;z-index:1}
+
+/* ---------- checklist ---------- */
+.chk{display:flex;align-items:center;gap:26px;padding:32px 34px;border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.09)}
+.chk .mk{flex:0 0 64px;height:64px;border-radius:18px;background:rgba(53,208,165,.16);border:1px solid rgba(53,208,165,.34);color:#35D0A5;font-size:32px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.chk .c1{font-size:38px;font-weight:800;flex:0 0 auto}
+.chk .ar{color:#F5C451;font-size:32px;font-weight:900}
+.chk .c2{font-size:35px;color:#C6CEDE;font-weight:700}
+
+/* ---------- ending ---------- */
+.end .bigq{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;font-size:74px;line-height:1.36;font-weight:900;margin-top:20px}
+.bigq span{color:#F5C451}
+.endq{font-size:42px;line-height:1.5;color:#B7C0D4;margin-top:8px;flex:0 0 auto}
+.disclaimer{font-size:26px;line-height:1.6;color:#6C7690;margin-top:36px;border-top:1px solid rgba(255,255,255,.08);padding-top:26px;flex:0 0 auto}
+
+/* ---------- dense variant ---------- */
+.slide.dense h1{font-size:94px}
+.slide.dense .lead{font-size:40px}
+.slide.dense .facts{gap:26px;margin-top:36px}
+.slide.dense .fv{font-size:35px}
+.slide.dense .fv .tag{font-size:29px;padding:2px 12px;margin:4px 4px 4px 0}
+.slide.dense .callout .tx{font-size:40px}
+.slide.dense .callout{padding:32px 36px}
+
+/* ---------- footer ---------- */
+.ft{position:absolute;left:80px;right:80px;bottom:58px;display:flex;justify-content:space-between;align-items:center;font-size:25px;color:#6B7590;border-top:1px solid rgba(255,255,255,.08);padding-top:22px;z-index:4}
+.ft .pg{font-weight:800;color:#8E9AB2;letter-spacing:2px}
+.bar{position:absolute;left:0;bottom:0;height:10px;width:100%;background:rgba(255,255,255,.05);z-index:3}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#F5C451,#35D0A5)}
+
+body{display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px 0}
+</style></head><body>
+<section class="slide cover" id="s1">
+    <div class="hd"><span class="chip">期货新手必看</span><span class="chip ghosty">工具选型</span></div>
+    <h1>期货分析工具<br><span class="hl">怎么选</span>？</h1>
+    <div class="lead">5类常用经典工具，<b>一篇讲明白</b></div>
+    <div class="rule"></div>
+    <div class="tags">
+      <div class="tagb hot">看盘下单</div>
+      <div class="tagb">盯盘抢单</div>
+      <div class="tagb">产业数据</div>
+      <div class="tagb">量化回测</div>
+      <div class="tagb">期权波动率</div>
+    </div>
+    <div class="swipe"><span class="arrow">→</span> 下滑，一页一类工具</div>
+    
+<svg class="chart" viewBox="0 0 1080 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#F5C451" stroke-width="3" opacity=".55">
+    <line x1="90" y1="300" x2="90" y2="250"/><line x1="90" y1="270" x2="90" y2="220"/><rect x="76" y="252" width="28" height="14" fill="#F5C451" opacity=".5"/>
+    <line x1="180" y1="300" x2="180" y2="220"/><line x1="180" y1="240" x2="180" y2="180"/><rect x="166" y="222" width="28" height="16" fill="#F5C451" opacity=".45"/>
+    <line x1="270" y1="300" x2="270" y2="250"/><line x1="270" y1="270" x2="270" y2="200"/><rect x="256" y="232" width="28" height="30" fill="#F5C451" opacity=".55"/>
+    <line x1="360" y1="300" x2="360" y2="230"/><line x1="360" y1="250" x2="360" y2="170"/><rect x="346" y="186" width="28" height="46" fill="#F5C451" opacity=".5"/>
+    <line x1="450" y1="300" x2="450" y2="200"/><line x1="450" y1="220" x2="450" y2="120"/><rect x="436" y="132" width="28" height="60" fill="#F5C451" opacity=".6"/>
+    <line x1="540" y1="300" x2="540" y2="180"/><line x1="540" y1="200" x2="540" y2="90"/><rect x="526" y="150" width="28" height="46" fill="#F5C451" opacity=".5"/>
+    <line x1="630" y1="300" x2="630" y2="160"/><line x1="630" y1="180" x2="630" y2="70"/><rect x="616" y="110" width="28" height="56" fill="#35D0A5" opacity=".55"/>
+    <line x1="720" y1="300" x2="720" y2="130"/><line x1="720" y1="150" x2="720" y2="60"/><rect x="706" y="80" width="28" height="44" fill="#35D0A5" opacity=".5"/>
+    <line x1="810" y1="300" x2="810" y2="110"/><line x1="810" y1="130" x2="810" y2="40"/><rect x="796" y="66" width="28" height="52" fill="#35D0A5" opacity=".6"/>
+    <line x1="900" y1="300" x2="900" y2="90"/><line x1="900" y1="110" x2="900" y2="20"/><rect x="886" y="40" width="28" height="48" fill="#35D0A5" opacity=".5"/>
+  </g>
+  <polyline points="20,330 120,318 200,300 300,312 380,268 470,240 560,262 650,196 740,168 830,140 920,104 1060,70"
+    stroke="url(#g)" stroke-width="5" fill="none" opacity=".9"/>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#F5C451" stop-opacity=".25"/><stop offset="1" stop-color="#35D0A5" stop-opacity="1"/>
+  </linearGradient></defs>
+</svg>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">01 / 11</span>
+  </div>
+  <div class="bar"><i style="width:9%"></i></div></section>
+<section class="slide dense" id="s2">
+    <div class="ghost">?</div>
+    <div class="hd"><span class="chip">先说个扎心的事实</span></div>
+    <h1>“随便下一个软件”<br>分析行情<span class="hl">大概率不够用</span></h1>
+    <div class="lead">同样叫“分析工具”，其实干的是<b>五种完全不同的活</b>：</div>
+    <div class="items">
+      <div class="item"><div class="num">01</div><div><div class="tt">看行情、画K线、顺手下单</div><div class="tx">→ 属于<em>综合看盘终端</em>的活</div></div></div>
+      <div class="item"><div class="num">02</div><div><div class="tt">盯盘口、快速报单撤单</div><div class="tx">→ 属于<em>交易执行工具</em>的活</div></div></div>
+      <div class="item"><div class="num">03</div><div><div class="tt">查现货、库存、基差</div><div class="tx">→ 属于<em>产业数据工具</em>的活</div></div></div>
+      <div class="item"><div class="num">04</div><div><div class="tt">写策略、跑历史回测</div><div class="tx">→ 属于<em>量化平台</em>的活</div></div></div>
+      <div class="item"><div class="num">05</div><div><div class="tt">算IV、画波动率曲线</div><div class="tx">→ 属于<em>期权分析工具</em>的活</div></div></div>
+    </div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">02 / 11</span>
+  </div>
+  <div class="bar"><i style="width:18%"></i></div></section>
+<section class="slide dense" id="s3">
+    <div class="hd"><span class="chip">全景速览</span><span class="chip ghosty">先对号，再挑功能</span></div>
+    <h1>五类工具，<span class="hl">一张图</span>看懂分工</h1>
+    <div class="facts">
+      <div class="fact"><div class="fk">01</div><div class="fv"><b>综合看盘交易终端</b> — 看实时报价、画K线、设预警、直接下单<br><span class="tag">期货公司App</span><span class="tag">文华财经</span><span class="tag">博易大师</span><span class="tag">同花顺期货通</span><span class="tag">易盛极星</span></div></div>
+      <div class="fact"><div class="fk">02</div><div class="fv"><b>盘口与交易执行工具</b> — 快速报单撤单、盯委托与持仓<br><span class="tag">快期</span><span class="tag">无限易</span></div></div>
+      <div class="fact"><div class="fk">03</div><div class="fv"><b>产业基本面数据工具</b> — 现货价、库存产量、消费、基差<br><span class="tag">钢联数据等</span></div></div>
+      <div class="fact"><div class="fk">04</div><div class="fv"><b>量化研究与策略平台</b> — 写策略、历史回测、模拟与自动执行<br><span class="tag">易盛极智量化</span><span class="tag">无限易量化模块</span></div></div>
+      <div class="fact"><div class="fk">05</div><div class="fv"><b>期权波动率分析工具</b> — IV/HV、波动率曲线、组合风险<br><span class="tag">专业终端内置期权模块</span></div></div>
+    </div>
+    <div class="callout gold"><div class="lb">核心逻辑</div><div class="tx">场景不同，工具就不一样。别拿同一个软件硬扛所有活。</div></div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">03 / 11</span>
+  </div>
+  <div class="bar"><i style="width:27%"></i></div></section>
+<section class="slide " id="s4">
+    <div class="ghost left">01</div>
+    <div class="hd"><span class="chip">场景 01 / 05</span><span class="chip ghosty">日常看盘下单</span></div>
+    <h1>综合看盘<br><span class="hl">交易终端</span></h1>
+    <div class="lead">基础但高频的活：看实时报价、画K线、加指标、设价格预警，顺带把单也下了。</div>
+    <div class="facts">
+      <div class="fact"><div class="fk g">适合</div><div class="fv">普通交易者、靠<b>技术分析</b>做判断的人</div></div>
+      <div class="fact"><div class="fk g">常见</div><div class="fv"><span class="tag">期货公司官方App</span><span class="tag">文华财经</span><span class="tag">博易大师</span><span class="tag">同花顺期货通</span><span class="tag">易盛极星</span></div></div>
+      <div class="fact"><div class="fk g">挑时</div><div class="fv">图表顺不顺手、品种覆盖全不全、支不支持<b>条件单</b>、能否直连自己的交易账户、哪些功能要<b>收费</b></div></div>
+    </div>
+    <div class="callout"><div class="lb">选择重点</div><div class="tx">日常看盘下单顺不顺畅，功能跟自己的交易习惯合不合拍。</div></div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">04 / 11</span>
+  </div>
+  <div class="bar"><i style="width:36%"></i></div></section>
+<section class="slide " id="s5">
+    <div class="ghost left">02</div>
+    <div class="hd"><span class="chip">场景 02 / 05</span><span class="chip ghosty">短线抢单盯盘口</span></div>
+    <h1>盘口与<br><span class="hl">交易执行工具</span></h1>
+    <div class="lead">核心是<b>快速报单、快速撤单</b>，顺带把委托和持仓盯住。</div>
+    <div class="facts">
+      <div class="fact"><div class="fk g">适合</div><div class="fv">做短线的、特别在意<b>盘口细微变化</b>的人</div></div>
+      <div class="fact"><div class="fk g">常见</div><div class="fv"><span class="tag">快期</span><span class="tag">无限易</span>，以及部分专业终端自带的相关功能</div></div>
+      <div class="fact"><div class="fk g">挑时</div><div class="fv">下单交互顺不顺手、能不能<b>批量操作</b>、订单状态看不看得清、<b>断线后能不能顺利恢复</b></div></div>
+    </div>
+    <div class="callout"><div class="lb">选择重点</div><div class="tx">别只看“快不快”——真出事时，救你的是下单流程、订单核对和异常处理。</div></div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">05 / 11</span>
+  </div>
+  <div class="bar"><i style="width:45%"></i></div></section>
+<section class="slide " id="s6">
+    <div class="ghost left">03</div>
+    <div class="hd"><span class="chip">场景 03 / 05</span><span class="chip ghosty">做产业研究</span></div>
+    <h1>产业基本面<br><span class="hl">数据工具</span></h1>
+    <div class="lead">跟产业链挂钩的数据：现货价格、库存、产量、消费、基差。</div>
+    <div class="facts">
+      <div class="fact"><div class="fk g">适合</div><div class="fv">产业客户、靠<b>基本面</b>吃饭的研究者</div></div>
+      <div class="fact"><div class="fk g">常见</div><div class="fv"><span class="tag">钢联数据</span>，以及对应品种的专业数据服务商</div></div>
+      <div class="fact"><div class="fk g">挑时</div><div class="fv">来源可不可靠、统计样本够不够大、更新频率快不快、发布时间准不准时、历史数据存得够不够长</div></div>
+    </div>
+    <div class="callout"><div class="lb">选择重点</div><div class="tx">数据口径够不够明确，能不能持续跟上你要盯的品种的供需变化。</div></div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">06 / 11</span>
+  </div>
+  <div class="bar"><i style="width:55%"></i></div></section>
+<section class="slide " id="s7">
+    <div class="ghost left">04</div>
+    <div class="hd"><span class="chip">场景 04 / 05</span><span class="chip ghosty">跑策略做回测</span></div>
+    <h1>量化研究与<br><span class="hl">策略平台</span></h1>
+    <div class="lead">写策略 → 历史回测 → 模拟盘验证 → 自动化监控与执行。</div>
+    <div class="facts">
+      <div class="fact"><div class="fk g">适合</div><div class="fv">量化研究者、做<b>程序化交易</b>的人</div></div>
+      <div class="fact"><div class="fk g">常见</div><div class="fv"><span class="tag">易盛极智量化</span><span class="tag">无限易量化模块</span>，主要面向有一定经验、需用程序化管理策略的用户</div></div>
+      <div class="fact"><div class="fk g">挑时</div><div class="fv">历史数据质量、回测机制是否合理、<b>手续费和滑点</b>算没算、实盘<b>风控开关</b>灵不灵</div></div>
+    </div>
+    <div class="callout"><div class="lb">选择重点</div><div class="tx">回测结果靠不靠谱，实盘风控做得扎不扎实。</div></div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">07 / 11</span>
+  </div>
+  <div class="bar"><i style="width:64%"></i></div></section>
+<section class="slide " id="s8">
+    <div class="ghost left">05</div>
+    <div class="hd"><span class="chip">场景 05 / 05</span><span class="chip ghosty">做期权分析</span></div>
+    <h1>期权波动率<br><span class="hl">分析工具</span></h1>
+    <div class="lead">专门分析隐含波动率、历史波动率、波动率曲线，以及组合持仓的整体风险。</div>
+    <div class="facts">
+      <div class="fact"><div class="fk g">适合</div><div class="fv">期权交易者、研究<b>波动率</b>的人</div></div>
+      <div class="fact"><div class="fk g">常见</div><div class="fv">部分具备<b>期权分析功能</b>的专业终端，是这一类的经典选择</div></div>
+      <div class="fact"><div class="fk g">挑时</div><div class="fv">IV和HV做得细不细、波动率曲线画得准不准、能否从<b>单个合约延伸到组合</b>风险评估、数据更新及时不及时</div></div>
+    </div>
+    <div class="callout"><div class="lb">选择重点</div><div class="tx">能不能从单一合约分析扩展到组合风险评估，数据及不及时。</div></div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">08 / 11</span>
+  </div>
+  <div class="bar"><i style="width:73%"></i></div></section>
+<section class="slide " id="s9">
+    <div class="hd"><span class="chip">5秒自查</span><span class="chip ghosty">你该看哪一类</span></div>
+    <h1>对号入座，<span class="hl">一眼定位</span></h1>
+    <div class="lead">先看自己平时主要在哪个场景里折腾：</div>
+    <div class="items" style="margin-top:36px">
+      <div class="chk"><div class="mk">✓</div><div class="c1">日常看盘、做技术分析</div><div class="ar">→</div><div class="c2">综合看盘交易终端</div></div>
+      <div class="chk"><div class="mk">✓</div><div class="c1">盯盘口、频繁报撤单</div><div class="ar">→</div><div class="c2">交易执行工具</div></div>
+      <div class="chk"><div class="mk">✓</div><div class="c1">研究现货、库存和供需</div><div class="ar">→</div><div class="c2">产业基本面数据工具</div></div>
+      <div class="chk"><div class="mk">✓</div><div class="c1">写策略、跑历史回测</div><div class="ar">→</div><div class="c2">量化研究平台</div></div>
+      <div class="chk"><div class="mk">✓</div><div class="c1">分析期权和波动率</div><div class="ar">→</div><div class="c2">期权波动率分析工具</div></div>
+    </div>
+    <div class="callout gold"><div class="lb">别再走弯路</div><div class="tx">不用在错的软件里死磕功能。</div></div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">09 / 11</span>
+  </div>
+  <div class="bar"><i style="width:82%"></i></div></section>
+<section class="slide " id="s10">
+    <div class="hd"><span class="chip">选之前必看</span></div>
+    <h1>有几件事<br>得<span class="hl">提前说清楚</span></h1>
+    <div class="facts">
+      <div class="fact"><div class="fk">01</div><div class="fv">不同软件的<b>具体功能、权限范围、账户接入方式和支持的品种</b>，都可能随时间调整，各家软件也在不停迭代。</div></div>
+      <div class="fact"><div class="fk">02</div><div class="fv">具体请以<b>软件官方说明</b>和相关服务方的最新信息为准，别拿一篇文章当长期不变的标准。</div></div>
+      <div class="fact"><div class="fk">03</div><div class="fv">核对方式：看<b>官网/帮助文档</b>的功能与权限说明、翻<b>版本更新日志</b>，再用自己熟悉的品种<b>上手试一遍</b>下单与回测流程。</div></div>
+    </div>
+    <div class="callout"><div class="lb">一句话</div><div class="tx">工具会变，判断标准更耐看。</div></div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">10 / 11</span>
+  </div>
+  <div class="bar"><i style="width:91%"></i></div></section>
+<section class="slide end" id="s11">
+    <div class="hd"><span class="chip">最后一句</span></div>
+    <div class="bigq">选期货软件，<br>从来不是<br><span>功能越多越好</span>，<br>而是工具跟你的<br>交易场景<span>对得上</span>。</div>
+    <div class="endq">对上了，用起来才顺手；<br>对不上，功能再花哨也是摆设。</div>
+    <div class="tags" style="margin-top:48px">
+      <div class="tagb hot">收藏这张清单</div>
+      <div class="tagb">选软件前先对一遍</div>
+    </div>
+    <div class="disclaimer">本文为期货工具科普与选型思路整理，不构成任何投资建议。文中软件的功能、权限、账户接入方式与支持品种以各官方最新说明为准；市场有风险，决策需谨慎。</div>
+    
+  <div class="ft">
+    <span>期货分析工具选型指南</span>
+    <span class="pg">11 / 11</span>
+  </div>
+  <div class="bar"><i style="width:100%"></i></div></section>
+</body></html>
