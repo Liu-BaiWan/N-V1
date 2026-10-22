@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>瓶片期货交易软件哪个好用？2026 年主流软件推荐与选型指南</title>
+<meta name="description" content="瓶片期货（PR）交易软件怎么选？2026 年主流看盘交易终端、移动 APP、套利工具、量化平台与产业数据终端的分类推荐、选型要点、下载流程与避坑清单。官方科普长文。">
+<style>
+:root{
+  --ink:#14181f;
+  --ink-2:#3c4654;
+  --ink-3:#6b7686;
+  --navy:#0f2740;
+  --navy-2:#1b3d63;
+  --gold:#b8862b;
+  --gold-bg:#fdf6e6;
+  --line:#e3e8ef;
+  --bg:#ffffff;
+  --bg-soft:#f7f9fc;
+  --ok:#1c7a4f;
+  --ok-bg:#edf8f2;
+  --warn:#b23c17;
+  --warn-bg:#fdf1ec;
+  --info:#1d5fa8;
+  --info-bg:#eef4fb;
+  --radius:10px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  font-size:16.5px;line-height:1.85;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px 80px}
+
+/* ---------- header ---------- */
+header.hero{
+  background:
+    radial-gradient(1200px 400px at 85% -30%,rgba(184,134,43,.20),transparent 60%),
+    linear-gradient(160deg,#0b1d31 0%,#123055 55%,#0f2740 100%);
+  color:#fff;padding:52px 22px 46px;margin-bottom:34px;
+  border-bottom:3px solid var(--gold);
+}
+.hero-inner{max-width:960px;margin:0 auto}
+.kicker{
+  display:inline-block;font-size:12.5px;letter-spacing:.16em;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.26);
+  padding:4px 12px;border-radius:999px;margin-bottom:18px;color:#f0dfb6;
+}
+header.hero h1{
+  margin:0 0 14px;font-size:clamp(26px,4.4vw,40px);line-height:1.3;
+  letter-spacing:-.01em;font-weight:800;
+}
+header.hero h1 em{font-style:normal;color:#f3cf7d}
+.sub{color:#c9d6e4;font-size:15.5px;max-width:760px;margin:0 0 20px}
+.meta{
+  display:flex;flex-wrap:wrap;gap:8px 10px;font-size:13px;color:#b9c8da;
+}
+.meta span{background:rgba(255,255,255,.08);padding:3px 11px;border-radius:6px}
+
+/* ---------- toc ---------- */
+nav.toc{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 24px;margin:0 0 36px;
+}
+nav.toc h2{margin:0 0 12px;font-size:15px;color:var(--navy);letter-spacing:.04em}
+nav.toc ol{margin:0;padding-left:20px;columns:2;column-gap:34px}
+nav.toc li{margin:5px 0;font-size:14.5px;break-inside:avoid}
+nav.toc a{color:var(--ink-2);text-decoration:none}
+nav.toc a:hover{color:var(--info);text-decoration:underline}
+
+/* ---------- headings ---------- */
+h2.sec{
+  margin:52px 0 18px;padding:0 0 12px;border-bottom:2px solid var(--line);
+  font-size:clamp(20px,2.6vw,25px);color:var(--navy);line-height:1.4;font-weight:800;
+  scroll-margin-top:16px;
+}
+h2.sec .num{
+  display:inline-block;min-width:32px;color:var(--gold);
+  font-variant-numeric:tabular-nums;
+}
+h3{font-size:18.5px;color:var(--navy-2);margin:32px 0 12px;font-weight:700;scroll-margin-top:16px}
+h4{font-size:16px;color:var(--navy);margin:22px 0 8px;font-weight:700}
+p{margin:0 0 15px}
+a{color:var(--info)}
+strong{color:var(--navy)}
+ul,ol{margin:0 0 16px;padding-left:24px}
+li{margin:7px 0}
+code{
+  background:var(--bg-soft);border:1px solid var(--line);border-radius:4px;
+  padding:1px 6px;font-size:.9em;font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+  color:#8a5b12;
+}
+
+/* ---------- table ---------- */
+.table-wrap{overflow-x:auto;margin:0 0 22px;border:1px solid var(--line);border-radius:var(--radius);-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.6px;background:#fff}
+thead th{
+  background:var(--navy);color:#fff;text-align:left;padding:11px 14px;
+  font-weight:600;font-size:14px;white-space:nowrap;letter-spacing:.02em;
+}
+tbody td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:#fafbfd}
+tbody th[scope="row"]{background:var(--bg-soft);text-align:left;font-weight:600;color:var(--navy);white-space:nowrap;padding:11px 14px;border-bottom:1px solid var(--line)}
+td strong{color:var(--navy)}
+
+/* ---------- cards / callouts ---------- */
+.callout{border-radius:var(--radius);padding:18px 22px;margin:0 0 22px;border:1px solid;font-size:15.4px}
+.callout p:last-child{margin-bottom:0}
+.callout .lbl{display:block;font-size:12.5px;letter-spacing:.1em;font-weight:700;margin-bottom:6px}
+.callout.key{background:var(--gold-bg);border-color:#ecd9a8}
+.callout.key .lbl{color:var(--gold)}
+.callout.note{background:var(--info-bg);border-color:#c9dcf2}
+.callout.note .lbl{color:var(--info)}
+.callout.warn{background:var(--warn-bg);border-color:#f2cdbc}
+.callout.warn .lbl{color:var(--warn)}
+.callout.good{background:var(--ok-bg);border-color:#bfe3d0}
+.callout.good .lbl{color:var(--ok)}
+.callout strong{color:inherit}
+
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:0 0 22px}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;background:#fff}
+.card h4{margin:0 0 8px;color:var(--navy);font-size:16px}
+.card p{font-size:14.4px;margin:0;color:var(--ink-2)}
+.card .tag{display:inline-block;font-size:12px;background:var(--navy);color:#fff;border-radius:4px;padding:1px 8px;margin-bottom:8px}
+.card .tag.free{background:var(--ok)}
+.card .tag.pay{background:var(--warn)}
+.card .tag.mix{background:var(--gold)}
+
+/* ---------- steps ---------- */
+ol.steps{list-style:none;padding:0;counter-reset:s}
+ol.steps>li{counter-increment:s;position:relative;padding:0 0 18px 48px;margin:0 0 6px;border-left:2px solid var(--line);margin-left:14px}
+ol.steps>li:last-child{padding-bottom:0;border-left-color:transparent}
+ol.steps>li::before{
+  content:counter(s);position:absolute;left:-15px;top:2px;width:28px;height:28px;border-radius:50%;
+  background:var(--navy);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+ol.steps b{color:var(--navy)}
+
+/* ---------- pitfalls ---------- */
+.pitfalls{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin:0 0 22px;padding:0;list-style:none}
+.pitfalls li{
+  background:var(--warn-bg);border:1px solid #f2cdbc;border-radius:var(--radius);
+  padding:13px 16px;margin:0;font-size:14.5px;position:relative;
+}
+.pitfalls li b{display:block;color:var(--warn);margin-bottom:3px;font-size:15px}
+.pitfalls li b::before{content:"✕ ";font-weight:700}
+
+/* ---------- cheat sheet ---------- */
+.cheat{
+  background:#0e1c2c;color:#dce7f2;border-radius:var(--radius);padding:22px 24px;margin:0 0 24px;
+  font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:13.6px;line-height:2;
+  overflow-x:auto;
+}
+.cheat .t{color:#f3cf7d;font-weight:700}
+.cheat .d{color:#7f93aa}
+
+/* ---------- source / footer ---------- */
+.sources{font-size:14px;color:var(--ink-3);background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 22px;margin:0 0 26px}
+.sources h4{margin-top:0}
+.sources ol{padding-left:22px;margin-bottom:0}
+.sources li{margin:6px 0}
+
+footer{border-top:2px solid var(--line);padding-top:22px;font-size:13.4px;color:var(--ink-3)}
+footer p{margin:0 0 10px}
+
+@media (max-width:700px){
+  body{font-size:16px}
+  nav.toc ol{columns:1}
+  .wrap{padding:0 16px 60px}
+  header.hero{padding:38px 16px 34px}
+}
+@media print{
+  nav.toc{display:none}
+  body{font-size:12pt}
+  h2.sec{page-break-after:avoid}
+  .table-wrap{overflow:visible}
+  table{min-width:0}
+  .cheat{background:#fff;color:#111;border:1px solid #999}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">官方科普 · 期货工具选型</div>
+    <h1>瓶片期货交易软件<em>哪个好用</em>？<br>2026 年主流软件推荐与选型指南</h1>
+    <p class="sub">瓶片（PR）上市两年多，行情早已不独立：它跟着 PTA 和 MEG 走，核心变量是加工费。市面上的看盘软件、套利工具、数据终端各有所长，用错工具才是真正的成本。</p>
+    <div class="meta">
+      <span>更新日期：2026 年 10 月</span>
+      <span>阅读时长：约 12 分钟</span>
+      <span>适用：个人投资者 / 产业客户 / 从业人员</span>
+      <span>本文不构成投资建议</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<nav class="toc">
+  <h2>目录</h2>
+  <ol>
+    <li><a href="#s1">先说结论</a></li>
+    <li><a href="#s2">第一步：记清瓶片硬参数</a></li>
+    <li><a href="#s3">第二步：拆成 5 类需求</a></li>
+    <li><a href="#s4">第三步：2026 主流软件推荐</a></li>
+    <li><a href="#s5">第四步：对号入座选型表</a></li>
+    <li><a href="#s6">第五步：下载与开通 5 步流程</a></li>
+    <li><a href="#s7">避坑清单：8 个常见坑</a></li>
+    <li><a href="#s8">一页速查卡</a></li>
+    <li><a href="#s9">信息来源与核对方法</a></li>
+  </ol>
+</nav>
+
+<h2 class="sec" id="s1"><span class="num">01</span>先说结论</h2>
+
+<div class="callout key">
+  <span class="lbl">核心结论</span>
+  <p><strong>瓶片期货没有"最好用"的交易软件，只有"对号入座"的软件组合。</strong></p>
+  <p>瓶片（PR）于 2024 年 8 月 30 日在郑州商品交易所上市，是国内聚酯产业链上最新的期货品种。它的行情不独立：生产 1 吨瓶片大约需要 0.855 吨 PTA 加 0.335 吨乙二醇（MEG），PTA 成本占比约 64%。2026 年 10 月 21 日，瓶片现货报 8662 元/吨、主力合约基差 646 元/吨，现货加工费 906 元/吨，而 PR2612 盘面加工费仅 713 元/吨——<strong>只看盘面不看加工费，看瓶片等于看半张报表。</strong></p>
+</div>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th>你的角色</th><th>2026 年够用的组合</th></tr></thead>
+  <tbody>
+    <tr><td><strong>个人短线 / 日内</strong></td><td>期货公司定制版 PC 终端（文华 WH6 / 博易大师 7 / 快期 V2 任选其一）＋ 期货公司官方免费 APP</td></tr>
+    <tr><td><strong>产业套保 / 加工利润</strong></td><td>上表基础上 ＋ 产业数据终端（隆众 / Mysteel / CCF）＋ 支持跨品种套利的模块</td></tr>
+    <tr><td><strong>量化 / 程序化</strong></td><td>金字塔（免费定制版）或 TB ＋ 麦语言（WH8）＋ vn.py 等自研方案，<strong>先报备</strong></td></tr>
+    <tr><td><strong>纯新手，先看懂盘面</strong></td><td>同花顺期货通 PC 版 ＋ 期货公司官方 APP（先看盘，不必急着下单）</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>下文按"<strong>先懂品种 → 再分需求 → 对号入座 → 按流程下载 → 避开坑</strong>"五步展开，说明 2026 年仍在市场主流的几款软件各自适合谁、挑什么、多少钱、从哪里下载。</p>
+
+<h2 class="sec" id="s2"><span class="num">02</span>第一步：记清瓶片硬参数，软件选择才有边界</h2>
+
+<p>选软件前，先确认你买的是哪个品种、交割规则是什么——很多选型失误，根源是对规则不熟。</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th style="width:26%">项目</th><th>瓶片期货（PR）标准信息</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">上市交易所</th><td>郑州商品交易所（郑商所）</td></tr>
+    <tr><th scope="row">交易代码</th><td>PR</td></tr>
+    <tr><th scope="row">上市时间</th><td>2024 年 8 月 30 日</td></tr>
+    <tr><th scope="row">交易单位</th><td>15 吨 / 手</td></tr>
+    <tr><th scope="row">报价单位</th><td>元（人民币）/ 吨</td></tr>
+    <tr><th scope="row">最小变动价位</th><td>2 元 / 吨</td></tr>
+    <tr><th scope="row">每日价格波动限制</th><td>上一交易日结算价 ±4%（交易所可依风险控制办法调整）</td></tr>
+    <tr><th scope="row">最低交易保证金</th><td>合约价值的 5%（临近交割月逐级提高至 10%、交割月 20%）</td></tr>
+    <tr><th scope="row">交易时间</th><td>日盘 9:00—11:30、13:30—15:00；夜盘 21:00—23:00（10:15—10:30 休息）</td></tr>
+    <tr><th scope="row">最后交易日 / 交割日</th><td>交割月份第 10 个 / 第 13 个交易日</td></tr>
+    <tr><th scope="row">交割方式</th><td>实物交割；适用期货转现货、仓库标准仓单交割、厂库标准仓单交割</td></tr>
+    <tr><th scope="row">交割品级</th><td>GB/T 17931—2018 瓶用聚酯二甲酸乙二酯（PET）树脂国标，食品包装用优等品水瓶级聚酯切片</td></tr>
+    <tr><th scope="row">交割品牌</th><td><strong>交割品牌制度</strong>（华润化学、珠海华润、万凯新材、重庆万凯、兴业塑化、海南逸盛、逸盛大化等），另设<strong>免检品牌</strong></td></tr>
+    <tr><th scope="row">仓单性质</th><td>通用标准仓单；仓单按每年 1 月、5 月、9 月第 15 个交易日节点强制注销轮换</td></tr>
+    <tr><th scope="row">产业链公式</th><td>瓶片 ≈ 0.855×PTA ＋ 0.335×MEG；加工利润 ≈ 瓶片 −（PTA×0.86 ＋ MEG×0.34）</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout note">
+  <span class="lbl">2026 年三个必须留意的变化</span>
+  <ol style="margin-bottom:0">
+    <li><strong>规则已更新。</strong>郑商所新版《瓶级聚酯切片期货业务细则》自 2026 年 5 月 14 日起施行（〔2026〕73 号公告），交易指令、保证金与限仓安排以新细则为准。</li>
+    <li><strong>最小下单量有调整。</strong>自 2026 年 3 月 9 日起，瓶片部分合约（2604—2609 等）每次最小开仓下单量调整为 <strong>4 手</strong>。用软件做批量抢单、网格或移仓换月时，下单量校验逻辑会变，别用旧参数写策略。</li>
+    <li><strong>交割仓（厂）库会调整。</strong>交割资源直接影响"能不能交割"，郑商所会不定期调整指定交割仓库与厂库（如 2026 年 10 月调整 PTA 及瓶片指定交割仓库）。跟踪仓单与交割资源，用软件里的<strong>仓单纵览 / 交割品牌 / 仓库名录</strong>比看新闻快。</li>
+  </ol>
+</div>
+
+<h2 class="sec" id="s3"><span class="num">03</span>第二步：把需求拆成 5 件事</h2>
+
+<p>新手最常见的误区，是"下载一个软件解决所有问题"。瓶片交易至少包含 5 类不同任务，对应 5 类工具：</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th style="width:20%">任务</th><th style="width:42%">具体在干什么</th><th>需要的工具能力</th></tr></thead>
+  <tbody>
+    <tr><td><strong>① 看盘下单</strong></td><td>看 PR 各合约分时 / K 线、买卖五档、快速下单、夜盘盯盘</td><td>基础行情 + 图表 + 下单 + 云条件单</td></tr>
+    <tr><td><strong>② 加工费与套利</strong></td><td>跟踪 PR − PTA/MEG 价差，用郑商所标准套利指令锁加工利润</td><td><strong>跨品种套利</strong>、套利 K 线、组合保证金、跨期移仓</td></tr>
+    <tr><td><strong>③ 基本面</strong></td><td>开工率、厂内库存、现货报价、加工费、出口</td><td><strong>产业数据终端</strong>（期货行情软件替代不了）</td></tr>
+    <tr><td><strong>④ 交割与仓单</strong></td><td>交割品牌、仓单注册注销、期转现、升贴水</td><td>仓单数据、交割业务指引</td></tr>
+    <tr><td><strong>⑤ 量化与程序化</strong></td><td>写策略、回测、自动下单、报撤单监控</td><td>策略开发环境 + 回测 + 外部接入与报备</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout key">
+  <span class="lbl">第 ② 项尤其关键</span>
+  <p>郑商所自 2025 年 5 月 29 日夜盘起推出 <strong>PTA-瓶片、PTA-对二甲苯</strong>跨品种套利指令，组合保证金按大边收取。锁定瓶片加工费这件产业客户最关心的事，交易所层面已经给了标准工具——<strong>软件能不能调用标准套利指令，直接决定你能不能把这套工具用起来。</strong></p>
+</div>
+
+<h2 class="sec" id="s4"><span class="num">04</span>第三步：2026 年主流软件推荐</h2>
+
+<div class="callout warn">
+  <span class="lbl">阅读前请注意</span>
+  <p>以下按公开可查的功能与版本整理（截至 2026 年 10 月）。<strong>软件版本、支持的品种、权限范围与收费方式会随厂商调整，下载与开通前请以厂商官网、期货公司官网"软件下载"栏目及您的客户经理的最新说明为准。</strong></p>
+</div>
+
+<h3>01｜综合看盘交易终端（PC 端）</h3>
+
+<p>覆盖 80% 日常需求的主力软件。评判标准只有三条：<strong>行情是否实时、图表是否顺手、下单是否稳</strong>。</p>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th style="width:16%">软件</th><th style="width:14%">2026 主流版本</th><th style="width:13%">费用</th><th style="width:22%">适合谁</th><th>挑它时重点看</th></tr></thead>
+  <tbody>
+    <tr><td><strong>文华赢顺 WH6</strong></td><td>V6.8.x（期货公司定制版）</td><td>定制版<strong>免费</strong>，外盘另付费</td><td>手动交易为主，要云条件单 / 画线下单</td><td>是否支持郑商所标准套利单、画线下单、云止损止盈；外盘行情为选配项</td></tr>
+    <tr><td><strong>博易大师 7</strong></td><td>V7.0.x（云交易版）</td><td>免费（外盘与云服务为增值项）</td><td>界面简洁、习惯传统期货操作的老手</td><td>云自选、云预警、云条件单、秒周期、周期同列 / 品种同列、分屏</td></tr>
+    <tr><td><strong>易盛极星 9.5</strong></td><td>V9.5.x</td><td>免费</td><td>想要<strong>多账户</strong>、轻量客户端</td><td>多账户登录、交易所与本地套利、本地条件单；部分定制版含郑商所五档行情</td></tr>
+    <tr><td><strong>快期 V2 / V3</strong></td><td>V2.93.x / V3.9.x</td><td>免费</td><td>手工快速交易、套利、批量预埋</td><td>V2 强在<strong>交易所与本地套利</strong>、云/本地条件单、预埋抢单；V3 增加专业 K 线与订单流，但<strong>不支持本地套利</strong>，做套利优先选 V2</td></tr>
+    <tr><td><strong>同花顺期货通 PC 版</strong></td><td>V4.3x</td><td>免费</td><td>新手、习惯股票软件操作</td><td>基差数据、仓单纵览、期现地图等<strong>基本面入口</strong>，这是同花顺的差异化优势</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout note">
+  <span class="lbl">关于"免费行情"要说清楚</span>
+  <p>部分期货公司定制版提供<strong>郑商所五档免费行情</strong>，更高档位与外盘行情通常需要付费或由期货公司承担成本。看到"免费"二字，务必确认是<strong>几档、哪个交易所、是否含夜盘</strong>——郑商所五档免费，不等于郑商所 Level-2 免费。</p>
+</div>
+
+<h4>文华财经的版本梯度（官方公开定价区间）</h4>
+<ul>
+  <li><strong>WH6 赢顺</strong>：基础交易软件，由期货公司向个人投资者提供，<strong>免费</strong>，覆盖约 90% 普通交易者需求；</li>
+  <li><strong>WH7 睿期大户室</strong>：约 1800 元/年起，增加公式预警、趋势线预警、一机多屏、套利交易，可选配多账户与五档 / 外盘数据；</li>
+  <li><strong>WH8</strong>：约 7800 元/年起，麦语言积木式编程、历史数据与期货接口，面向量化投资者；</li>
+  <li><strong>WH9 库安</strong>：面向机构与大户，可在手动 / 量化 / 套利执行链路上挂算法组件；</li>
+  <li><strong>随身行（手机端）</strong>：行情与图表可免费使用；<strong>实盘交易模块收费 60 元/月、150 元/季、450 元/年</strong>，服务卡与手机设备绑定，<strong>一台设备一张卡、绑定后不可改绑</strong>。</li>
+</ul>
+<p>外盘行情单独收费，文华官方口径为多数交易所约 600 元/交易所/年；PC 端与手机端授权互不通用，需分别购买。</p>
+
+<h3>02｜移动端 APP：夜间盯盘与临时下单</h3>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th style="width:30%">APP</th><th style="width:26%">性质</th><th style="width:20%">费用</th><th>适合谁</th></tr></thead>
+  <tbody>
+    <tr><td><strong>文华随身行</strong></td><td>软件厂商直营移动终端</td><td>行情/图表免费；实盘 60 元/月、450 元/年，设备绑定</td><td>已习惯文华界面、愿意为移动端体验付费</td></tr>
+    <tr><td><strong>博易掌上财富</strong></td><td>博易系移动端</td><td>免费</td><td>PC 用博易、移动端想保持一致</td></tr>
+    <tr><td><strong>同花顺期货通 APP</strong></td><td>第三方行情交易终端</td><td>免费</td><td>新手，想要行情+资讯+交易一站式</td></tr>
+    <tr><td><strong>期货公司自研 APP</strong><br>（方正中期"方小期"、广发期货"小添财"、国泰君安期货、中信建投"金建投"等）</td><td>期货公司官方出品，<strong>交易通道合规</strong></td><td>多数免费</td><td><strong>绝大多数人的首选</strong>：开户、交易、银期转账、云条件单一站式闭环</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout good">
+  <span class="lbl">这一栏的关键判断</span>
+  <p>期货公司官方 APP 的价值不在功能多，而在于<strong>"合规直连"和"问题有人管"</strong>。遇到登录、权限、报备、异常交易认定这类问题，只有期货公司能给你结论。代价是功能相对基础，资讯与深度工具要靠 PC 端或其他 APP 补齐。</p>
+</div>
+
+<h3>03｜跨品种套利与进阶交易：锁定瓶片加工费</h3>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th style="width:26%">工具</th><th style="width:46%">能力</th><th>费用 / 开通方式</th></tr></thead>
+  <tbody>
+    <tr><td><strong>郑商所标准套利指令</strong><br>PTA-瓶片、PTA-PX</td><td>交易所标准套利单，组合保证金按大边收取</td><td>随期货账户自动具备，多数支持标准套利的终端可直接调用</td></tr>
+    <tr><td><strong>文华 WH7</strong></td><td>自设套利合约、套利价差 / 价比 K 线、跨期跨品种蝶式套利</td><td>约 1800 元/年起</td></tr>
+    <tr><td><strong>快期 V2</strong></td><td>自定义任意套利组合，适配组合保证金优化</td><td>免费</td></tr>
+    <tr><td><strong>无限易</strong></td><td>跨期 / 跨品种套利、价差止损止盈、网格策略、多账户批量下单</td><td><strong>免费</strong>（多账户 / 机构程序化版需向期货公司申请）</td></tr>
+    <tr><td><strong>ATP</strong>（文华旗下专业套利终端）</td><td>防缺腿机制、四腿套利、智能挂单、云挂单</td><td>需向期货公司申请开通</td></tr>
+    <tr><td><strong>金字塔</strong></td><td>决策树拖拽式策略、多语言（PEL/Python/C++）、Tick 级回测</td><td>期货公司定制版通常可<strong>免费使用</strong>全功能</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout key">
+  <span class="lbl">实测选型建议</span>
+  <p>只想手动锁加工费 → 用郑商所标准套利指令 ＋ 快期 V2 或 WH7；要做成自动策略 → 金字塔或 TB 的期货公司定制版。</p>
+</div>
+
+<h3>04｜量化与程序化平台</h3>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th style="width:22%">平台</th><th style="width:48%">特点</th><th>注意</th></tr></thead>
+  <tbody>
+    <tr><td><strong>文华 WH8</strong></td><td>麦语言积木式编程、趋势 / 订单流策略、算法下单组件、历史数据</td><td>约 7800 元/年起；麦语言学习曲线平缓，适合无编程基础起步</td></tr>
+    <tr><td><strong>金字塔</strong></td><td>拖拽式决策树 + 多语言 + Tick 级回测</td><td>期货公司定制版常免费；需适配 CTP 接口</td></tr>
+    <tr><td><strong>TB（交易开拓者）</strong></td><td>老牌程序化平台，跨期 / 跨品种套利策略可程序化执行</td><td>多由期货公司定制，需申请开通</td></tr>
+    <tr><td><strong>vn.py 等开源框架</strong></td><td>完全自有可控，Python 生态，数据与策略自由</td><td>需自行开发与维护，接入测试、报备全部自担</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout warn">
+  <span class="lbl">合规必读</span>
+  <p>证监会《期货市场程序化交易管理规定（试行）》自 2025 年 10 月 9 日起施行，各交易所同步发布管理办法。<strong>客户从事程序化交易前，应当向期货公司报告有关信息，收到期货公司确认后方可从事程序化交易</strong>；自 2026 年 4 月 9 日起，未按规定路径完成报告的，不得从事程序化交易。使用外接程序化软件还须签署外部接入协议、通过看穿式相关测试。<strong>别把"策略还没上线"当成不报备的理由。</strong></p>
+</div>
+
+<h3>05｜产业数据与基本面终端：看懂瓶片为什么涨</h3>
+
+<div class="grid2">
+  <div class="card">
+    <span class="tag">产业数据机构</span>
+    <h4>隆众资讯 / Mysteel / 卓创资讯</h4>
+    <p>瓶片产能、开工率、厂内库存、现货报价、加工费、装置检修计划。</p>
+  </div>
+  <div class="card">
+    <span class="tag">资讯与价格库</span>
+    <h4>生意社 / 华瑞 CCF / 化纤资源网 / 中国化纤工业协会</h4>
+    <p>PET 报价一览、产业链指数、协会产能与需求数据。</p>
+  </div>
+  <div class="card">
+    <span class="tag">期货公司研究</span>
+    <h4>同花顺期货通基差数据 / 仓单纵览 / 期现地图；各家晨报、日报</h4>
+    <p>把现货数据与期货盘面拼在一起，是性价比最高的组合方式。</p>
+  </div>
+  <div class="card">
+    <span class="tag">财经资讯终端</span>
+    <h4>东方财富期货 / 新浪财经期货 / 金十数据</h4>
+    <p>行情速览、持仓与资金流向、7×24 快讯，适合消息面跟踪（只看不交易，不要用来直接下单）。</p>
+  </div>
+</div>
+
+<div class="callout key">
+  <span class="lbl">产业客户的一个实用技巧</span>
+  <p>把数据终端的"现货报价 + 库存 + 开工率"做成日更表格，或做成看盘软件的自定义指标页，对照 PR 主力的基差与盘面加工费。2026 年 10 月 21 日现货加工费 906 元/吨对盘面加工费 713 元/吨，<strong>190 元/吨的价差本身就是一条信息</strong>，而不是两个孤立的数字。</p>
+</div>
+
+<h2 class="sec" id="s5"><span class="num">05</span>第四步：对号入座选型表</h2>
+
+<div class="table-wrap">
+<table>
+  <thead><tr><th style="width:24%">你的场景</th><th style="width:26%">PC 端</th><th style="width:22%">移动端</th><th>数据 / 套利补充</th></tr></thead>
+  <tbody>
+    <tr><td>第一次做瓶片，先熟悉盘面</td><td>同花顺期货通 PC 版</td><td>期货公司官方 APP</td><td>生意社 / 东方财富看现货报价</td></tr>
+    <tr><td>日内短线、手动下单</td><td>文华 WH6 或 快期 V2</td><td>博易掌上财富（同花顺 / 随身行亦可）</td><td>东方财富持仓数据</td></tr>
+    <tr><td>盯夜盘 + 条件单</td><td>文华 WH6（云条件单）</td><td>期货公司 APP 或 随身行（收费）</td><td>金十快讯</td></tr>
+    <tr><td>产业套保、锁加工费</td><td>快期 V2 / WH7（自定义套利）＋ 郑商所标准套利指令</td><td>期货公司 APP</td><td>隆众 / Mysteel / CCF</td></tr>
+    <tr><td>多账户、多腿、网格</td><td>无限易 / 易盛极星 9.5</td><td>期货公司 APP</td><td>—</td></tr>
+    <tr><td>量化策略</td><td>金字塔 / TB / WH8</td><td>—</td><td>自建数据源 + 报备</td></tr>
+    <tr><td>出海 / 外盘联动</td><td>WH7（选配外盘行情）</td><td>随身行（外盘另购）</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 class="sec" id="s6"><span class="num">06</span>第五步：下载与开通 5 步流程</h2>
+
+<ol class="steps">
+  <li><b>先开户，再选软件。</b>交易类软件必须绑定你自己的期货账户，行情类软件可单独注册。</li>
+  <li><b>只从官方渠道下载。</b>① 期货公司官网"软件下载 / 客户服务"栏目；② 软件厂商官网（文华财经 wh6.wenhua.com.cn、博易 boyidashi.com、快期 shinnytech.com 等）；③ 官方应用商店。<strong>绝不从第三方下载站、"绿色版"、网盘链接下载交易软件。</strong></li>
+  <li><b>在软件里选对柜台。</b>下载后第一件事是选交易接入为"××期货 CTP 主席"（或二席），不要随手点默认站点。</li>
+  <li><b>先模拟，后实盘。</b>多数终端内置模拟交易环境（行情账号常见为 <code>paqh</code> 一类通用测试账号，具体以厂商说明为准），先用模拟盘跑通"登录—看盘—下单—撤单—看结算"五步。</li>
+  <li><b>需要程序化或外接系统，提前报备。</b>把软件名称、指令执行方式、开发主体报给期货公司，拿到确认再上线。</li>
+</ol>
+
+<h2 class="sec" id="s7"><span class="num">07</span>避坑清单：8 个常见坑</h2>
+
+<ul class="pitfalls">
+  <li><b>只看软件名，不看柜台</b>同一个软件不同期货公司版本功能不同，云条件单存在文华服务器与期货公司服务器两套，互不通用。</li>
+  <li><b>以为"随身行免费"</b>行情图表免费，实盘交易收费且绑定设备，换手机要重新买卡。</li>
+  <li><b>把"免费"当成"全档位"</b>郑商所五档免费 ≠ Level-2 免费；外盘行情通常另付费。</li>
+  <li><b>下载到第三方站点</b>交易软件被篡改是账号被盗的头号来源。</li>
+  <li><b>程序化不报备</b>2026 年 4 月 9 日起，未完成报告的程序化交易不得开展。</li>
+  <li><b>忽略郑商所标准套利指令</b>PTA-瓶片、PTA-PX 套利 + 组合保证金按大边，是产业客户降资金占用的实在工具。</li>
+  <li><b>拿着旧参数写策略</b>2026 年 3 月 9 日起瓶片部分合约最小开仓下单量已调为 4 手，规则以郑商所最新公告为准。</li>
+  <li><b>只在盘面找答案</b>瓶片跟随原料、贴近加工费。忽略基差、库存与开工率，胜率会被基本面拖走。</li>
+</ul>
+
+<h2 class="sec" id="s8"><span class="num">08</span>一页速查卡</h2>
+
+<div class="cheat">
+<span class="t">【合约】</span>PR ｜ 15吨/手 ｜ 2元/吨 ｜ ±4%涨跌停 ｜ 保证金 5%→10%→20% ｜ 夜盘 21:00-23:00<br>
+<span class="t">【交割】</span>品牌交割 + 通用仓单 ｜ 仓单 1/5/9月15日强制注销 ｜ 期转现可用 ｜ 最后交易日=交割月第10个交易日<br>
+<span class="t">【成本】</span>瓶片 ≈ 0.855×PTA + 0.335×MEG ｜ 加工利润 = 瓶片 −(PTA×0.86 + MEG×0.34)<br>
+<span class="t">【套利】</span>PTA-瓶片、PTA-PX（2025-05-29 夜盘上线，组合保证金按大边）<br>
+<span class="d">——————————————————————————————</span><br>
+<span class="t">【电脑】</span>看盘下单：文华WH6(免费) / 博易大师7(免费) / 快期V2(免费,套利强) / 同花顺期货通(免费,基本面入口强)<br>
+<span class="t">【手机】</span>期货公司官方APP(免费,合规) / 随身行(实盘60元月·450元年,设备绑定) / 掌上财富(免费)<br>
+<span class="t">【套利】</span>郑商所标准套利指令 + 快期V2 或 WH7；无限易免费<br>
+<span class="t">【量化】</span>金字塔(定制版常免费) / TB / WH8(约7800元起) —— 先报备再上线<br>
+<span class="t">【数据】</span>隆众 / Mysteel / 卓创 / CCF / 生意社<br>
+<span class="t">【下载】</span>只认期货公司官网 + 软件厂商官网
+</div>
+
+<h2 class="sec" id="s9"><span class="num">09</span>信息来源与核对方法</h2>
+
+<div class="sources">
+  <h4>本文引用来源</h4>
+  <ol>
+    <li>郑州商品交易所《瓶片期货合约》《瓶级聚酯切片期货业务细则》及相关公告（含〔2026〕73 号公告、2026 年 3 月 9 日最小下单量调整通知、2026 年 10 月交割仓库调整公告）；</li>
+    <li>中国证监会《期货市场程序化交易管理规定（试行）》（〔2025〕12 号，自 2025 年 10 月 9 日起施行）及各交易所程序化交易管理办法；</li>
+    <li>郑州商品所《关于推出 PTA-瓶片、PTA-对二甲苯跨品种套利指令的通知》（郑商函〔2025〕392 号）；</li>
+    <li>软件厂商与期货公司官网公开说明（文华财经、博易大师、快期 / 信易科技、易盛、无限易等及各家期货公司软件下载栏目）；</li>
+    <li>公开市场资讯报道（现货报价、开工率、库存、加工费与基差等行情数据）。</li>
+  </ol>
+</div>
+
+<div class="sources">
+  <h4>核对方法（建议定期执行）</h4>
+  <ol>
+    <li><strong>合约参数、保证金与限仓</strong> → 郑商所官网"合约与规则"栏目；</li>
+    <li><strong>交割品牌、免检品牌、仓库与厂库名录</strong> → 郑商所官网"交割业务指引 / 仓库名录"；</li>
+    <li><strong>软件版本与收费</strong> → 软件厂商官网与文华"小超市"等官方定价页；</li>
+    <li><strong>你能用哪些软件、报备怎么走</strong> → 开户期货公司官网"软件下载"栏目与客户经理；</li>
+    <li><strong>价格、库存、开工率</strong> → 产业数据机构与期货公司研究日报。</li>
+  </ol>
+</div>
+
+<footer>
+  <p><strong>免责声明：</strong>本文由官方科普栏目整理，<strong>仅用于期货工具与规则的科普介绍，不构成任何投资建议、要约或承诺</strong>。文中所列软件的功能、版本、收费标准、支持品种与账户接入方式，均可能随厂商与期货公司的调整而变化，具体以各软件官方说明、期货公司最新公告及您的客户经理提供的信息为准。市场有风险，期货交易及程序化交易可能导致本金亏损，程序化交易还需遵守报告管理与异常交易相关规定。请独立判断、自担风险、谨慎决策。</p>
+  <p>本文更新于 2026 年 10 月 · 主题：瓶片期货交易软件哪个好用？2026 年主流软件推荐</p>
+</footer>
+
+</div>
+</body>
+</html>
